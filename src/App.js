@@ -91,19 +91,540 @@ const AnswerText = styled.p`
 // -------- Full question set for "Anti-cancer drug" --------
 // (76 questions converted from your CSV, with id, text, 4 options, correct index, and explanation)
 const fullAntiCancerQuestions = [
-  { id: "1", text: "Which alkylating agent is most commonly associated with hemorrhagic cystitis?", options: ["Cyclophosphamide", "Melphalan", "Busulfan", "Ifosfamide"], correct: 3, explanation: "Ifosfamide’s acrolein metabolite causes bladder toxicity and hemorrhagic cystitis." },
-  { id: "2", text: "Methotrexate exerts its anticancer effect by inhibiting which enzyme?", options: ["Thymidylate synthase", "Dihydrofolate reductase", "Ribonucleotide reductase", "DNA polymerase α"], correct: 1, explanation: "Methotrexate is a folate analog that blocks dihydrofolate reductase, depleting thymidine." },
-  { id: "3", text: "Which anti-neoplastic agent is a Vinca alkaloid?", options: ["Vincristine", "Bleomycin", "Cytarabine", "Tamoxifen"], correct: 0, explanation: "Vincristine disrupts microtubules and is a Vinca alkaloid." },
-  { id: "4", text: "Doxorubicin is best classified as:", options: ["Alkylating agent", "Antitumor antibiotic", "Antimetabolite", "Hormonal agent"], correct: 1, explanation: "Doxorubicin is a widely used antitumor antibiotic." },
-  { id: "5", text: "Cisplatin is most useful in the treatment of:", options: ["Leukemia", "Testicular cancer", "Retinoblastoma", "Prostate cancer"], correct: 1, explanation: "Cisplatin is an effective agent for testicular cancer." },
-  { id: "6", text: "Bleomycin causes dose-limiting toxicity in which organ?", options: ["Liver", "Bone marrow", "Lungs", "Kidney"], correct: 2, explanation: "Pulmonary fibrosis is a known side effect due to bleomycin." },
-  { id: "7", text: "Which drug is a monoclonal antibody against CD20?", options: ["Rituximab", "Trastuzumab", "Bevacizumab", "Cetuximab"], correct: 0, explanation: "Rituximab targets CD20 on B-cells." },
-  { id: "8", text: "Tamoxifen is used primarily to treat:", options: ["Breast cancer", "Prostate cancer", "Lung cancer", "Colon cancer"], correct: 0, explanation: "Tamoxifen is a selective estrogen receptor modulator used in breast cancer." },
-  { id: "9", text: "Vinblastine disrupts which cellular structure?", options: ["DNA", "Microtubules", "Ribosomes", "Mitochondria"], correct: 1, explanation: "Vinblastine inhibits microtubule formation." },
-  { id: "10", text: "5-Fluorouracil (5-FU) primarily inhibits:", options: ["DNA polymerase", "Thymidylate synthase", "Topoisomerase II", "RNA polymerase"], correct: 1, explanation: "5-FU inhibits thymidylate synthase affecting DNA synthesis." },
-  // ... Continue similarly for all 76 questions ...
-  // For brevity, here is an example shortened set; you would paste all 76 in the same format.
+  {
+    id: "1",
+    text: "Which of the following is an alkylating agent?",
+    options: ["Cyclophosphamide", "Methotrexate", "Vincristine", "Doxorubicin"],
+    correct: 0,
+    explanation: "Cyclophosphamide is a commonly used alkylating agent."
+  },
+  {
+    id: "2",
+    text: "Methotrexate primarily inhibits which enzyme?",
+    options: ["DNA polymerase", "Thymidylate synthase", "Dihydrofolate reductase", "Topoisomerase II"],
+    correct: 2,
+    explanation: "Methotrexate inhibits dihydrofolate reductase, blocking DNA synthesis."
+  },
+  {
+    id: "3",
+    text: "Which anti-neoplastic agent is a Vinca alkaloid?",
+    options: ["Vincristine", "Bleomycin", "Cytarabine", "Tamoxifen"],
+    correct: 0,
+    explanation: "Vincristine disrupts microtubules and is a Vinca alkaloid."
+  },
+  {
+    id: "4",
+    text: "Doxorubicin is best classified as:",
+    options: ["Alkylating agent", "Antitumor antibiotic", "Antimetabolite", "Hormonal agent"],
+    correct: 1,
+    explanation: "Doxorubicin is a widely used antitumor antibiotic."
+  },
+  {
+    id: "5",
+    text: "Cisplatin is most useful in the treatment of:",
+    options: ["Leukemia", "Testicular cancer", "Retinoblastoma", "Prostate cancer"],
+    correct: 1,
+    explanation: "Cisplatin is an effective agent for testicular cancer."
+  },
+  {
+    id: "6",
+    text: "Bleomycin causes dose-limiting toxicity in which organ?",
+    options: ["Liver", "Bone marrow", "Lungs", "Kidney"],
+    correct: 2,
+    explanation: "Pulmonary fibrosis is a known side effect due to bleomycin."
+  },
+  {
+    id: "7",
+    text: "Which drug is a monoclonal antibody against CD20?",
+    options: ["Rituximab", "Trastuzumab", "Bevacizumab", "Cetuximab"],
+    correct: 0,
+    explanation: "Rituximab targets the CD20 antigen on B cells."
+  },
+  {
+    id: "8",
+    text: "Tamoxifen is used primarily to treat:",
+    options: ["Breast cancer", "Prostate cancer", "Lung cancer", "Colon cancer"],
+    correct: 0,
+    explanation: "Tamoxifen is used mainly in estrogen receptor-positive breast cancer."
+  },
+  {
+    id: "9",
+    text: "Vinblastine disrupts which cellular structure?",
+    options: ["DNA", "Microtubules", "Ribosomes", "Mitochondria"],
+    correct: 1,
+    explanation: "Vinblastine inhibits microtubule formation, arresting mitosis."
+  },
+  {
+    id: "10",
+    text: "5-Fluorouracil (5-FU) primarily inhibits:",
+    options: ["DNA polymerase", "Thymidylate synthase", "Topoisomerase II", "RNA polymerase"],
+    correct: 1,
+    explanation: "5-FU inhibits thymidylate synthase, disrupting DNA synthesis."
+  },
+  {
+    id: "11",
+    text: "Which agent is an antimetabolite?",
+    options: ["Cyclophosphamide", "Methotrexate", "Vincristine", "Procarbazine"],
+    correct: 1,
+    explanation: "Methotrexate is an antimetabolite that disrupts folate metabolism."
+  },
+  {
+    id: "12",
+    text: "What is the mechanism of action of paclitaxel?",
+    options: ["Microtubule stabilization", "DNA alkylation", "Topoisomerase inhibition", "Folate antagonism"],
+    correct: 0,
+    explanation: "Paclitaxel stabilizes microtubules and prevents cell division."
+  },
+  {
+    id: "13",
+    text: "Which side effect is common with anthracyclines like doxorubicin?",
+    options: ["Nephrotoxicity", "Cardiotoxicity", "Neurotoxicity", "Ototoxicity"],
+    correct: 1,
+    explanation: "Doxorubicin can cause dose-dependent cardiotoxicity."
+  },
+  {
+    id: "14",
+    text: "Which alkylating agent crosses the blood-brain barrier?",
+    options: ["Carmustine", "Cyclophosphamide", "Melphalan", "Busulfan"],
+    correct: 0,
+    explanation: "Carmustine penetrates the CNS and is used for brain tumors."
+  },
+  {
+    id: "15",
+    text: "The dose-limiting toxicity of vincristine is:",
+    options: ["Myelosuppression", "Neurotoxicity", "Nephrotoxicity", "Cardiotoxicity"],
+    correct: 1,
+    explanation: "Vincristine commonly causes peripheral neuropathy."
+  },
+  {
+    id: "16",
+    text: "Fluorouracil is primarily used to treat which cancer?",
+    options: ["Colon cancer", "Leukemia", "Breast cancer", "Lymphoma"],
+    correct: 0,
+    explanation: "5-FU is a mainstay treatment in colon and other solid tumors."
+  },
+  {
+    id: "17",
+    text: "Which drug acts as a tyrosine kinase inhibitor?",
+    options: ["Imatinib", "Methotrexate", "Bleomycin", "Paclitaxel"],
+    correct: 0,
+    explanation: "Imatinib targets BCR-ABL tyrosine kinase in CML."
+  },
+  {
+    id: "18",
+    text: "What is the primary toxicity of cisplatin?",
+    options: ["Nephrotoxicity", "Neurotoxicity", "Cardiotoxicity", "Hepatotoxicity"],
+    correct: 0,
+    explanation: "Nephrotoxicity limits its clinical dosing."
+  },
+  {
+    id: "19",
+    text: "Etoposide inhibits which enzyme?",
+    options: ["Topoisomerase I", "Topoisomerase II", "DNA polymerase", "RNA polymerase"],
+    correct: 1,
+    explanation: "Etoposide is a topoisomerase II inhibitor causing DNA breaks."
+  },
+  {
+    id: "20",
+    text: "Tamoxifen acts as an antagonist at which receptor?",
+    options: ["Estrogen receptor", "Progesterone receptor", "Androgen receptor", "Glucocorticoid receptor"],
+    correct: 0,
+    explanation: "Tamoxifen blocks estrogen receptor in breast tissue."
+  },
+  {
+    id: "21",
+    text: "Which is a side effect of bleomycin?",
+    options: ["Pulmonary fibrosis", "Peripheral neuropathy", "Cardiotoxicity", "Ototoxicity"],
+    correct: 0,
+    explanation: "Bleomycin causes lung fibrosis due to oxidative damage."
+  },
+  {
+    id: "22",
+    text: "Which drug is a folate antagonist?",
+    options: ["Methotrexate", "Vincristine", "Etoposide", "Paclitaxel"],
+    correct: 0,
+    explanation: "Methotrexate inhibits dihydrofolate reductase."
+  },
+  {
+    id: "23",
+    text: "What is the drug class of cytarabine?",
+    options: ["Alkylating agent", "Antimetabolite", "Antitumor antibiotic", "Hormone antagonist"],
+    correct: 1,
+    explanation: "Cytarabine is a pyrimidine antimetabolite."
+  },
+  {
+    id: "24",
+    text: "Procarbazine causes which major side effect?",
+    options: ["Myelosuppression", "Peripheral neuropathy", "Disulfiram-like reaction", "Cardiotoxicity"],
+    correct: 2,
+    explanation: "Procarbazine causes a disulfiram-like reaction with alcohol."
+  },
+  {
+    id: "25",
+    text: "Trastuzumab targets which receptor in breast cancer?",
+    options: ["HER2/neu", "Estrogen receptor", "Progesterone receptor", "EGFR"],
+    correct: 0,
+    explanation: "Trastuzumab targets HER2 receptor overexpressed in some breast cancers."
+  },
+  {
+    id: "26",
+    text: "Which is cell cycle-specific drug?",
+    options: ["Methotrexate", "Cisplatin", "Dacarbazine", "Cyclophosphamide"],
+    correct: 0,
+    explanation: "Methotrexate is S-phase specific."
+  },
+  {
+    id: "27",
+    text: "Which drug is associated with pulmonary fibrosis?",
+    options: ["Bleomycin", "Vincristine", "Doxorubicin", "Methotrexate"],
+    correct: 0,
+    explanation: "Pulmonary toxicity is a limiting side effect of bleomycin."
+  },
+  {
+    id: "28",
+    text: "Which alkylating agent requires mesna to prevent hemorrhagic cystitis?",
+    options: ["Ifosfamide", "Busulfan", "Melphalan", "Carmustine"],
+    correct: 0,
+    explanation: "Mesna is used to detoxify acrolein from ifosfamide."
+  },
+  {
+    id: "29",
+    text: "Vincristine primarily causes which toxicity?",
+    options: ["Nephrotoxicity", "Neurotoxicity", "Myelosuppression", "Cardiotoxicity"],
+    correct: 1,
+    explanation: "Vincristine causes peripheral neuropathy."
+  },
+  {
+    id: "30",
+    text: "Which drug acts by intercalating DNA and inhibiting topoisomerase II?",
+    options: ["Doxorubicin", "Methotrexate", "Cyclophosphamide", "Vinblastine"],
+    correct: 0,
+    explanation: "Doxorubicin intercalates into DNA and inhibits topoisomerase II."
+  },
+  {
+    id: "31",
+    text: "What is the mechanism of action of chlorambucil?",
+    options: ["Alkylates DNA", "Inhibits DNA polymerase", "Blocks microtubule formation", "Topoisomerase inhibitor"],
+    correct: 0,
+    explanation: "Chlorambucil is an alkylating agent damaging DNA."
+  },
+  {
+    id: "32",
+    text: "Pentostatin is used primarily for:",
+    options: ["Hairy cell leukemia", "Breast cancer", "Lung cancer", "Colon cancer"],
+    correct: 0,
+    explanation: "Pentostatin is an adenosine deaminase inhibitor used in hairy cell leukemia."
+  },
+  {
+    id: "33",
+    text: "Which drug is used in chronic myeloid leukemia targeting BCR-ABL?",
+    options: ["Imatinib", "Vincristine", "Methotrexate", "Doxorubicin"],
+    correct: 0,
+    explanation: "Imatinib inhibits the BCR-ABL tyrosine kinase in CML."
+  },
+  {
+    id: "34",
+    text: "Asparaginase acts by:",
+    options: ["Degrading asparagine", "DNA crosslinking", "Inhibiting microtubules", "Alkylating DNA"],
+    correct: 0,
+    explanation: "It depletes asparagine, which leukemia cells need."
+  },
+  {
+    id: "35",
+    text: "Carmustine is used for:",
+    options: ["Brain tumors", "Testicular cancer", "Leukemia", "Lymphoma"],
+    correct: 0,
+    explanation: "Carmustine crosses the blood-brain barrier."
+  },
+  {
+    id: "36",
+    text: "Which drug causes Fanconi syndrome as a side effect?",
+    options: ["Ifosfamide", "Cyclophosphamide", "Busulfan", "Carmustine"],
+    correct: 0,
+    explanation: "Ifosfamide can damage renal tubules causing Fanconi syndrome."
+  },
+  {
+    id: "37",
+    text: "Trastuzumab is contraindicated in patients with:",
+    options: ["Heart failure", "Renal failure", "Liver failure", "Pulmonary fibrosis"],
+    correct: 0,
+    explanation: "It can worsen cardiac function."
+  },
+  {
+    id: "38",
+    text: "Gemcitabine is a:",
+    options: ["Nucleoside analog", "Alkylating agent", "Monoclonal antibody", "Hormone antagonist"],
+    correct: 0,
+    explanation: "Gemcitabine is a nucleoside analog used mainly for pancreatic cancer."
+  },
+  {
+    id: "39",
+    text: "Mitomycin C is an example of:",
+    options: ["Antitumor antibiotic", "Antimetabolite", "Alkylating agent", "Microtubule inhibitor"],
+    correct: 0,
+    explanation: "Mitomycin C crosslinks DNA and acts as an antitumor antibiotic."
+  },
+  {
+    id: "40",
+    text: "Which medication is used as a rescue agent after methotrexate therapy?",
+    options: ["Leucovorin", "Mesna", "Filgrastim", "Amifostine"],
+    correct: 0,
+    explanation: "Leucovorin rescues normal cells from methotrexate toxicity."
+  },
+  {
+    id: "41",
+    text: "Which drug is a proteasome inhibitor?",
+    options: ["Bortezomib", "Imatinib", "Paclitaxel", "Vinblastine"],
+    correct: 0,
+    explanation: "Bortezomib inhibits the proteasome leading to apoptosis."
+  },
+  {
+    id: "42",
+    text: "Taxanes act by:",
+    options: ["Stabilizing microtubules", "Depolymerizing microtubules", "Inhibiting DNA synthesis", "Alkylating DNA"],
+    correct: 0,
+    explanation: "Taxanes prevent microtubule disassembly."
+  },
+  {
+    id: "43",
+    text: "Which agent is associated with hand-foot syndrome?",
+    options: ["Capecitabine", "Cyclophosphamide", "Vincristine", "Doxorubicin"],
+    correct: 0,
+    explanation: "Capecitabine commonly causes hand-foot syndrome."
+  },
+  {
+    id: "44",
+    text: "Which chemotherapy drug is derived from the periwinkle plant?",
+    options: ["Vincristine", "Doxorubicin", "Bleomycin", "Methotrexate"],
+    correct: 0,
+    explanation: "Vincristine and vinblastine are derived from Catharanthus roseus."
+  },
+  {
+    id: "45",
+    text: "Anthracyclines induce cardiotoxicity mainly due to:",
+    options: ["Free radical formation", "MGMT depletion", "DNA crosslinking", "Microtubule inhibition"],
+    correct: 0,
+    explanation: "Free radicals cause oxidative damage to cardiac cells."
+  },
+  {
+    id: "46",
+    text: "Which agent is useful for treating hormone receptor-positive breast cancer?",
+    options: ["Tamoxifen", "Cisplatin", "Vincristine", "Methotrexate"],
+    correct: 0,
+    explanation: "Tamoxifen blocks estrogen receptors in breast tissue."
+  },
+  {
+    id: "47",
+    text: "Topoisomerase I inhibitors include:",
+    options: ["Irinotecan", "Etoposide", "Doxorubicin", "Bleomycin"],
+    correct: 0,
+    explanation: "Irinotecan blocks topoisomerase I."
+  },
+  {
+    id: "48",
+    text: "Which of the following is NOT a side effect of cyclophosphamide?",
+    options: ["Hemorrhagic cystitis", "Neurotoxicity", "Myelosuppression", "Alopecia"],
+    correct: 1,
+    explanation: "Neurotoxicity is not common with cyclophosphamide."
+  },
+  {
+    id: "49",
+    text: "Which drugs are known as spindle poisons?",
+    options: ["Vincristine and Paclitaxel", "Bleomycin and Doxorubicin", "Methotrexate and 5-FU", "Cisplatin and Carboplatin"],
+    correct: 0,
+    explanation: "Vincristine disrupts microtubules; Paclitaxel stabilizes them."
+  },
+  {
+    id: "50",
+    text: "Which alkylating agent is cell-cycle nonspecific and requires exposure during any phase?",
+    options: ["Carmustine", "Methotrexate", "Vinblastine", "Paclitaxel"],
+    correct: 0,
+    explanation: "Carmustine cross-links DNA regardless of cell cycle phase."
+  },
+  {
+    id: "51",
+    text: "Mitoxantrone is similar to which drug class?",
+    options: ["Anthracyclines", "Vinca alkaloids", "Antimetabolites", "Alkylating agents"],
+    correct: 0,
+    explanation: "Mitoxantrone is an anthracenedione related to anthracyclines."
+  },
+  {
+    id: "52",
+    text: "Which agent is used to treat acute promyelocytic leukemia?",
+    options: ["All-trans retinoic acid", "Imatinib", "Vincristine", "Bleomycin"],
+    correct: 0,
+    explanation: "ATRA induces differentiation in APL cells."
+  },
+  {
+    id: "53",
+    text: "Besides alkylation, which action does busulfan primarily have?",
+    options: ["Myelosuppression", "Cardiotoxicity", "Neurotoxicity", "Pulmonary fibrosis"],
+    correct: 3,
+    explanation: "Busulfan can cause pulmonary fibrosis."
+  },
+  {
+    id: "54",
+    text: "Etoposide is mainly active in which phase of the cell cycle?",
+    options: ["S phase", "G2 phase", "M phase", "G1 phase"],
+    correct: 1,
+    explanation: "Etoposide is cell-cycle specific to G2."
+  },
+  {
+    id: "55",
+    text: "Which drug is NOT a DNA topoisomerase inhibitor?",
+    options: ["Doxorubicin", "Etoposide", "Irinotecan", "Cyclophosphamide"],
+    correct: 3,
+    explanation: "Cyclophosphamide is an alkylating agent."
+  },
+  {
+    id: "56",
+    text: "The dose-limiting toxicity of methotrexate is:",
+    options: ["Liver toxicity", "Renal toxicity", "Myelosuppression", "Neurotoxicity"],
+    correct: 2,
+    explanation: "Methotrexate commonly causes myelosuppression."
+  },
+  {
+    id: "57",
+    text: "Which drug requires folinic acid (leucovorin) rescue?",
+    options: ["Methotrexate", "Cyclophosphamide", "Doxorubicin", "Vinblastine"],
+    correct: 0,
+    explanation: "Leucovorin rescues normal cells from methotrexate toxicity."
+  },
+  {
+    id: "58",
+    text: "Which drug inhibits microtubule assembly?",
+    options: ["Vincristine", "Paclitaxel", "Doxorubicin", "Bleomycin"],
+    correct: 0,
+    explanation: "Vincristine prevents microtubule polymerization."
+  },
+  {
+    id: "59",
+    text: "Imatinib is most effective in treating:",
+    options: ["Chronic myeloid leukemia", "Lymphoma", "Melanoma", "Lung cancer"],
+    correct: 0,
+    explanation: "It targets BCR-ABL kinase specific to CML."
+  },
+  {
+    id: "60",
+    text: "Capecitabine is converted in the body to:",
+    options: ["5-Fluorouracil", "Methotrexate", "Vinblastine", "Cyclophosphamide"],
+    correct: 0,
+    explanation: "Capecitabine is a prodrug of 5-FU."
+  },
+  {
+    id: "61",
+    text: "Which drug is used as an anti-metabolite in cancer therapy?",
+    options: ["Methotrexate", "Bleomycin", "Vincristine", "Cisplatin"],
+    correct: 0,
+    explanation: "Methotrexate interrupts DNA synthesis by antimetabolite action."
+  },
+  {
+    id: "62",
+    text: "A major side effect of cisplatin is:",
+    options: ["Nephrotoxicity", "Neutropenia", "Neurotoxicity", "Hepatotoxicity"],
+    correct: 0,
+    explanation: "Kidney damage limits cisplatin dosing."
+  },
+  {
+    id: "63",
+    text: "Which drug combination includes a topoisomerase I inhibitor?",
+    options: ["Irinotecan and 5-FU", "Vincristine and Bleomycin", "Methotrexate and Cyclophosphamide", "Paclitaxel and Doxorubicin"],
+    correct: 0,
+    explanation: "Irinotecan is a topo I inhibitor used in combination therapies."
+  },
+  {
+    id: "64",
+    text: "Which drug class do paclitaxel and docetaxel belong to?",
+    options: ["Taxanes", "Alkylating agents", "Vinca alkaloids", "Anthracyclines"],
+    correct: 0,
+    explanation: "Taxanes stabilize microtubules."
+  },
+  {
+    id: "65",
+    text: "Which chemo agent is known to cause peripheral neuropathy?",
+    options: ["Vincristine", "Methotrexate", "Bleomycin", "Cisplatin"],
+    correct: 0,
+    explanation: "Vincristine causes sensory and motor neuropathy."
+  },
+  {
+    id: "66",
+    text: "The antidote Mesna is used to reduce toxicity caused by:",
+    options: ["Ifosfamide", "Methotrexate", "Vinblastine", "Bleomycin"],
+    correct: 0,
+    explanation: "Mesna neutralizes urotoxic metabolites of ifosfamide."
+  },
+  {
+    id: "67",
+    text: "Which agent acts as a monoclonal antibody against HER2?",
+    options: ["Trastuzumab", "Rituximab", "Cetuximab", "Bevacizumab"],
+    correct: 0,
+    explanation: "Trastuzumab targets HER2-positive breast cancers."
+  },
+  {
+    id: "68",
+    text: "Which drug acts by binding to tubulin and inhibiting depolymerization?",
+    options: ["Paclitaxel", "Vincristine", "Etoposide", "Cyclophosphamide"],
+    correct: 0,
+    explanation: "Paclitaxel stabilizes microtubules."
+  },
+  {
+    id: "69",
+    text: "Which drug is part of the anti-metabolite class?",
+    options: ["5-Fluorouracil", "Bleomycin", "Carmustine", "Vinblastine"],
+    correct: 0,
+    explanation: "5-FU interferes with nucleotide synthesis."
+  },
+  {
+    id: "70",
+    text: "Which agent is used in Hodgkin's lymphoma and derived from podophyllotoxin?",
+    options: ["Etoposide", "Cisplatin", "Methotrexate", "Doxorubicin"],
+    correct: 0,
+    explanation: "Etoposide is a topoisomerase II inhibitor derived from podophyllotoxin."
+  },
+  {
+    id: "71",
+    text: "Which drug is associated with cardiotoxicity related to cumulative dose?",
+    options: ["Doxorubicin", "Vincristine", "Methotrexate", "Bleomycin"],
+    correct: 0,
+    explanation: "Anthracyclines like doxorubicin have dose-limiting cardiotoxicity."
+  },
+  {
+    id: "72",
+    text: "The mechanism of action of irinotecan is inhibiting:",
+    options: ["Topoisomerase I", "DNA polymerase", "Topoisomerase II", "RNA polymerase"],
+    correct: 0,
+    explanation: "Irinotecan is a topoisomerase I inhibitor."
+  },
+  {
+    id: "73",
+    text: "Which agent is a folate analog?",
+    options: ["Methotrexate", "Vinblastine", "Doxorubicin", "Bleomycin"],
+    correct: 0,
+    explanation: "Methotrexate is a folate analog that inhibits dihydrofolate reductase."
+  },
+  {
+    id: "74",
+    text: "Which drug is renowned for causing myelosuppression as dose-limiting toxicity?",
+    options: ["Methotrexate", "Paclitaxel", "Cisplatin", "Vincristine"],
+    correct: 0,
+    explanation: "Methotrexate and many chemo drugs cause bone marrow suppression."
+  },
+  {
+    id: "75",
+    text: "Which drug is an antitumor antibiotic used in Hodgkin lymphoma?",
+    options: ["Doxorubicin", "Bleomycin", "Methotrexate", "Vinblastine"],
+    correct: 1,
+    explanation: "Bleomycin is an antitumor antibiotic used in Hodgkin lymphoma."
+  },
+  {
+    id: "76",
+    text: "Which chemotherapy drug exhibits a disulfiram-like effect?",
+    options: ["Procarbazine", "Vincristine", "Cyclophosphamide", "Doxorubicin"],
+    correct: 0,
+    explanation: "Procarbazine causes disulfiram-like reactions with alcohol intake."
+  }
 ];
+
 
 // Group all tests/folders here, you can add more folders
 const initialTestData = {
